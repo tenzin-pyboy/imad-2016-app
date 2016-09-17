@@ -5,21 +5,42 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title: 'Article One | Tenzin ',
-    heading: 'Article One',
-    date: '17 sep, 2016',
-    content: `<p> 
-                This is my content of the Article one. This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.
-            </p>  
-            <p> 
-                This is my content of the Article one. This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.
-            </p>
-            <p> 
-                This is my content of the Article one. This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one;
-            </p>`
+var article = {
+    articleOne: {
+        title: 'Article One | Tenzin ',
+        heading: 'Article One',
+        date: '17 sep, 2016',
+        content: `<p> 
+                    This is my content of the Article one. This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.
+                </p>  
+                <p> 
+                    This is my content of the Article one. This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.
+                </p>
+                <p> 
+                    This is my content of the Article one. This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one.This is my content of the Article one;
+                </p>`
+    },
+    articleTwo: {
+        title: 'Article One | Tenzin ',
+        heading: 'Article Two',
+        date: '18 sep, 2016',
+        content: `<p> 
+                    This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two. This is my content of the Article two.
+                  </p>`
+    },
+    articleThree: {
+        title: 'Article Three | Tenzin ',
+        heading: 'Article Three',
+        date: '19 sep, 2016',
+        content: `<p> 
+                    This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three.
+                </p>  
+               <p> 
+                    This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three. This is my content of the Article three.
+                </p>  
+              `
+    }
 };
-
 
 function createTemplate (data) {
     var title = data.title;
@@ -63,15 +84,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function (req, res){
-   res.send(createTemplate(articleOne));
+   res.send(createTemplate(artile.articleOne));
 });
 
 app.get('/article-two', function (req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+   res.send(createTemplate(article.articleTwo));
 });
 
 app.get('/article-three', function (req, res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+   res.send(createTemplate(article.articleThree));
 });
 
 app.get('/ui/style.css', function (req, res) {
