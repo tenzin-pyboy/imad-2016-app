@@ -1,7 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    margin-top: 60px;
 }
 
 .center {
@@ -28,7 +27,7 @@ body {
 	margin: 30px;
 	text-shadow: 0 2px #000000;
 	font-family: 'Trebuchet MS', 'Helvetica';
-  color: white;
+    color: white;
 }
 
 h1 {
@@ -40,7 +39,6 @@ h1 {
                 margin: 0 auto;
                 color: rgba(53, 13, 14, 0.55);
                 font-family: sans-serif;
-                padding-top: 60px;
                 padding-left: 20px;
                 padding-right: 20px;
             }
