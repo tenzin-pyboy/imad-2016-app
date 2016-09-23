@@ -19,7 +19,7 @@ button.onclick = function () {
     }
   };
   // Make actual request
-  request.open('GET', 'http://http://tenzin-pyboy.imad.hasura-app.io/counter', true);
+  request.open('GET', 'http://tenzin-pyboy.imad.hasura-app.io/counter', true);
   request.send(null);
 };
 
