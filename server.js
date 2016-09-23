@@ -12,13 +12,13 @@ var articles = {
       date: 'Sep 5, 2016',
       content: `
           <p>
-              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
           </p>
           <p>
-              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
           </p>
           <p>
-              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. 
+              This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.
           </p>`
     },
     'article-two': {
@@ -46,7 +46,7 @@ function createTemplate (data) {
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
-    
+
     var htmlTemplate = `
     <html>
       <head>
@@ -55,7 +55,7 @@ function createTemplate (data) {
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link href="/ui/style.css" rel="stylesheet" />
-      </head> 
+      </head>
       <body>
           <div class="container">
               <div>
@@ -82,6 +82,11 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var counter = 0;
+app.get('/counter', function (req, res) {
+  counter += 1;
+  res.send(counter.toString());
+})
 app.get('/:articleName', function (req, res) {
   // articleName == article-one
   // articles[articleName] == {} content object for article one
