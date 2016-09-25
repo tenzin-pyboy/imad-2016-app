@@ -71,6 +71,12 @@ function createTemplate (data) {
               <div>
                 ${content}
               </div>
+              <div class="comment">
+                   <textarea name="message" rows="10" cols="100">
+                        The cat was playing in the garden.
+                   </textarea>
+               <input type='submit' value='Submit' />  
+              </div>
           </div>
       </body>
     </html>
@@ -107,9 +113,9 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 var names = [];
-app.get('/submit-name/:name', function (req, res) {
+app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx 
   // Get the name from the request
-  var name = req.params.name;
+  var name = req.query.name;
 
   names.push(name);
   // JSON used
