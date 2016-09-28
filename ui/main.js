@@ -24,8 +24,8 @@ button.onclick = function () {
   request.send(null);
 };
 
-var submit = document.getElementById('submit_btn');
-submit.onclick = function () {
+var submitName = document.getElementById('submit_btn');
+submitName.onclick = function () {
   // Make a request to the server and send the name
     // Create a request Object
   var request = new XMLHttpRequest();
@@ -57,6 +57,38 @@ submit.onclick = function () {
   // Make actual request
   request.open('GET', 'http://tenzin-pyboy.imad.hasura-app.io/submit-name?name= '+ name, true);
   request.send(null);
+};
+
+submitArticle = document.getElementById('submit_btn');
+submitArticle.onclick = function () {
+    // Make requestt to server  and send the article
+    // Create a request Object
+    var request = new XMLHttpRequest();
+    
+    // Capture the respond and store it in a variable
+    request.onreadystatechange = function () {
+        
+        //Take action
+        if(request.status === 200 ) {
+            
+            // Capture the list of articles and render it as a list.
+            var articles = rewquest.responseText;
+            articles = JSON.parse(articles);
+            var list = '';
+            for(var i=0; i<articles.length; i++) {
+                list += '<p>' + articles[i] + '</p>';
+            }
+            var ul = document.getElementById('articles-para');
+            ul.innerHTML = list;
+        }
+    };
+    
+    //submit article 
+    var articleInput = document.getElementById('article');
+    var article = articleInput.value;
+    
+    //Make actual reqest 
+    request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/summit-article-one?article= ' + article, true);
 };
 
 
