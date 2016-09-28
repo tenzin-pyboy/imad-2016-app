@@ -71,9 +71,11 @@ function createTemplate (data) {
                 <div>
                 ${content}
                 </div>
+                <div id="article-para">
+                </div>
                 <div class="comment">
-                    <textarea name="message" rows="10" cols="100">
-                        Start writting Articles Here.
+                    <textarea type="text" id="article" placeholder="article" rows="10" cols="120">
+                        Start writting Article Here.
                     </textarea>
                 <input type='submit' value='Submit' />  
                 </div>
@@ -127,7 +129,7 @@ app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx
 });
 
 var articles = [];
-app.get('article-one', function (req, res) {
+app.get('submit-article-one', function (req, res) {
     // Get the article from the request
     var article = req.query.name;
     articles.push(article);
