@@ -27,7 +27,6 @@ button.onclick = function () {
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
   // Make a request to the server and send the name
-  
     // Create a request Object
   var request = new XMLHttpRequest();
 
@@ -59,3 +58,5 @@ submit.onclick = function () {
   request.open('GET', 'http://tenzin-pyboy.imad.hasura-app.io/submit-name?name= '+ name, true);
   request.send(null);
 };
+
+
