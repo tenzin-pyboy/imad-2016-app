@@ -42,7 +42,7 @@ var articles = {
 };
 
 function createTemplate (data) {
-   // var title = data.title;
+   var title = data.title;
     var date = data.date;
     var heading = data.heading;
     var content = data.content;
@@ -51,7 +51,7 @@ function createTemplate (data) {
     <html>
         <head>
             <title>
-             // ${title}
+             ${title}
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link href="/ui/style.css" rel="stylesheet" />
@@ -128,13 +128,15 @@ app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx
   res.send(JSON.stringify(names));
 });
 
-//var articles = [];
-//app.get('submit-article-one', function (req, res) {
+/*
+var articles = [];
+app.get('submit-article-one', function (req, res) {
     // Get the article from the request
-  //  var article = req.query.name;
-    //articles.push(article);
-    //res.send(JSON.stringify(articles));
-//});
+    var article = req.query.name;
+    articles.push(article);
+    res.send(JSON.stringify(articles));
+});
+*/
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
