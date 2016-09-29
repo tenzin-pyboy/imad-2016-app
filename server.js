@@ -120,7 +120,7 @@ app.get('/articles', function (req, res) {
   // articles[articleName] == {} content object for article one
   //var articleName = req.params.articleName;
   var page = new createTemplate();
-  res.send(page);
+  res.send(page.htmlTemplate);
   //creatTemplate(articles[articleName]))
 });
 
