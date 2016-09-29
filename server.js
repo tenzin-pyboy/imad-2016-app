@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-/*
+
 var articles = {
     'article-one': {
       title: 'Article One | Tenzin',
@@ -40,12 +40,12 @@ var articles = {
           </p>`
     }
 };
-*/
+
 function createTemplate () {
-   /* var title = data.title;
+    var title = data.title;
     var date = data.date;
     var heading = data.heading;
-    var content = data.content; */
+    var content = data.content; 
 
     var htmlTemplate = `
     <html>
@@ -114,13 +114,11 @@ app.get('/submit-articles', function (req, res) {
     res.send(JSON.stringify(articles));
 });
 
-app.get('/articles', function (req, res) {
-  // /:articleNam
+app.get('/:articleNam', function (req, res) {
   // articleName == article-one
   // articles[articleName] == {} content object for article one
-  //var articleName = req.params.articleName;
-  res.send(createTemplate());
-  //creatTemplate(articles[articleName]))
+  var articleName = req.params.articleName;
+  res.send(creatTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
