@@ -4,7 +4,7 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-
+/*
 var articles = {
     'article-one': {
       title: 'Article One | Tenzin',
@@ -40,18 +40,18 @@ var articles = {
           </p>`
     }
 };
-
-function createTemplate (data) {
-    var title = data.title;
+*/
+function createTemplate () {
+   /* var title = data.title;
     var date = data.date;
     var heading = data.heading;
-    var content = data.content;
+    var content = data.content; */
 
     var htmlTemplate = `
     <html>
         <head>
             <title>
-             ${title}
+                Articles
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link href="/ui/style.css" rel="stylesheet" />
@@ -63,13 +63,10 @@ function createTemplate (data) {
                 </div>
                 <hr/>
                 <h3>
-                  ${heading}
+                  Daily Article
                 </h3>
+                <hr/>
                 <div>
-                  ${date}
-                </div>
-                <div>
-                ${content}
                 </div>
                 <div id="article-para">
                 </div>
@@ -117,11 +114,14 @@ app.get('submit-article-one', function (req, res) {
     res.send(JSON.stringify(articles));
 });
 
-app.get('/:articleName', function (req, res) {
+app.get('articles', function (req, res) {
+  // /:articleNam
   // articleName == article-one
   // articles[articleName] == {} content object for article one
-  var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));
+  //var articleName = req.params.articleName;
+  var page = new creatTemplate();
+  res.send(page);
+  //creatTemplate(articles[articleName]))
 });
 
 app.get('/ui/style.css', function (req, res) {
