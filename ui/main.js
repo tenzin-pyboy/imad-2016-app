@@ -90,6 +90,7 @@ submitArticle.onclick = function () {
     
     //Make actual reqest 
     request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/summit-articles?article= ' + article, true);
+    request.send(null);
 };
 
 
