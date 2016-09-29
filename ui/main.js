@@ -73,7 +73,7 @@ submitArticle.onclick = function () {
         if(request.status === 200 ) {
             
             // Capture the list of articles and render it as a list.
-            var articles = rewquest.responseText;
+            var articles = request.responseText;
             articles = JSON.parse(articles);
             var list = '';
             for(var i=0; i<articles.length; i++) {
