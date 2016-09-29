@@ -74,7 +74,7 @@ function createTemplate () {
                     <textarea type="text" id="article" placeholder="article" rows="10" cols="120">
                         Start writting Article Here.
                     </textarea>
-                <input type='submit' value='Submit' id="submit_btn"/>  
+                <input type='submit' value='Submit' id="submit_btn_art"/>  
                 </div>
                 </div>
                     <script type="text/javascript" src="/ui/main.js">
