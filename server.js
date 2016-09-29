@@ -107,7 +107,7 @@ app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx
 });
 
 var articles = [];
-app.get('submit-article-one', function (req, res) {
+app.get('/submit-articles', function (req, res) {
     // Get the article from the request
     var article = req.query.name;
     articles.push(article);
