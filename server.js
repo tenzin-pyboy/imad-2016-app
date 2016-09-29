@@ -109,7 +109,7 @@ app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx
 var articles = [];
 app.get('/submit-articles', function (req, res) {
     // Get the article from the request
-    var article = req.query.name;
+    var article = req.query.article;
     articles.push(article);
     res.send(JSON.stringify(articles));
 });
