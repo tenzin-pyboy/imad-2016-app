@@ -59,7 +59,7 @@ submit.onclick = function () {
   request.send(null);
 };
 
-/*
+
 submitArticle = document.getElementById('submit_btn');
 submitArticle.onclick = function () {
     // Make requestt to server  and send the article
@@ -91,6 +91,6 @@ submitArticle.onclick = function () {
     //Make actual reqest 
     request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/summit-article-one?article= ' + article, true);
 };
-*/
+
 
 
