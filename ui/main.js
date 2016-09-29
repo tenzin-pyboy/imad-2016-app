@@ -60,7 +60,7 @@ submit.onclick = function () {
 };
 
 
-submitArticle = document.getElementById('submit_btn_art');
+submitArticle = document.getElementById('submit_btn');
 submitArticle.onclick = function () {
     // Make requestt to server  and send the article
     // Create a request Object
