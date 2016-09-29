@@ -114,7 +114,7 @@ app.get('/submit-articles', function (req, res) {
     res.send(JSON.stringify(articles));
 });
 
-app.get('/:articleNam', function (req, res) {
+app.get('/:articleName', function (req, res) {
   // articleName == article-one
   // articles[articleName] == {} content object for article one
   var articleName = req.params.articleName;
