@@ -40,6 +40,7 @@ var articles = {
           </p>`
     }
 };
+console.log(articles['article-one']);
 
 function createTemplate (data) {
     var title = data.title;
