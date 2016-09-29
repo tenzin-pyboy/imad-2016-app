@@ -89,7 +89,7 @@ submitArticle.onclick = function () {
     var article = articleInput.value;
     
     //Make actual reqest 
-    request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/summit-article-one?article= ' + article, true);
+    request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/summit-articles?article= ' + article, true);
 };
 
 
