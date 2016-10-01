@@ -28,6 +28,7 @@ body {
 	text-shadow: 0 2px #000000;
 	font-family: 'Trebuchet MS', 'Helvetica';
     color: white;
+    background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
 }
 
 h1 {
