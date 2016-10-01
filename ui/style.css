@@ -15,7 +15,7 @@ body {
     font-weight: bold;
 }
 
-.img-medium {
+#img-medium {
     height: 100px;
 }
 //	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
