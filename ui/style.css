@@ -27,7 +27,7 @@ img-medium {
 	margin: 30px;
 	text-shadow: 0 2px #000000;
 	font-family: 'Trebuchet MS', 'Helvetica';
-    color: white;
+    color: #bfbfbf;
 }
 
 h1 {
@@ -37,7 +37,7 @@ h1 {
 .container {
                 max-width: 800px;
                 margin: 0 auto;
-                color: #bfbfbf;
+                color: rgba(53, 13, 14, 0.55);
                 font-family: sans-serif;
                 padding-left: 20px;
                 padding-right: 20px;
