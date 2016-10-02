@@ -111,6 +111,12 @@ app.get('/submit-articles', function (req, res) {
     res.send(JSON.stringify(articles));
 });
 
+var counter = 0;
+app.get('/counter', function (req, res) {
+  counter += 1;
+  res.send(counter.toString());
+});
+
 app.get('/:articleName', function (req, res) {
   // articleName == article-one
   // articles[articleName] == {} content object for article one
@@ -119,11 +125,7 @@ app.get('/:articleName', function (req, res) {
   res.send(createTemplate(articles[articleName]));
 });
 
-var counter = 0;
-app.get('/counter', function (req, res) {
-  counter += 1;
-  res.send(counter.toString());
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
