@@ -103,12 +103,12 @@ app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx
   res.send(JSON.stringify(names));
 });
 
-var articles = [];
-app.get('/submit-articles', function (req, res) {
+var blogs = [];
+app.get('/submit-blogs', function (req, res) {
     // Get the article from the request
-    var article = req.query.article;
-    articles.push(article);
-    res.send(JSON.stringify(articles));
+    var blog = req.query.blog;
+    blogs.push(blog);
+    res.send(JSON.stringify(blogs));
 });
 
 var counter = 0;
