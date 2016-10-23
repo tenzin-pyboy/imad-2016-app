@@ -1,6 +1,16 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
+
+var config = {
+    user: 'tenzin-pyboy',
+    database: 'tenzin-pyboy',
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD
+}; 
+
 
 var app = express();
 app.use(morgan('combined'));
@@ -40,7 +50,6 @@ var articles = {
           </p>`
     }
 };
-console.log(articles['article-one']);
 
 function createTemplate (data) {
     var title = data.title;
@@ -88,11 +97,22 @@ function createTemplate (data) {
     return htmlTemplate;
 }
 
+var pool = new Pool(config);
+app.get('/test-db', function (req, res) {
+    //make a select request
+    //retrun a response with result
+    pool.query('SELECT * FROM test', function (err, result) {
+        if(err) {
+            res.status(500).send(err.toString());
+        } else {
+            res.send(JSON.stringify(result));
+        }
+    });
+});
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
-
 
 var names = [];
 app.get('/submit-name', function (req, res) { // URL : /submit-name?name=xxxxxx 
