@@ -61,7 +61,7 @@ function createTemplate (data) {
     <html>
         <head>
             <title>
-                Articles
+                ${title}
             </title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <link href="/ui/style.css" rel="stylesheet" />
@@ -73,12 +73,14 @@ function createTemplate (data) {
                 </div>
                 <hr/>
                 <h3>
-                  Daily Article
+                  ${heading}
                 </h3>
                 <hr/>
                 <div>
+                    ${date}
                 </div>
                 <div id="article-para">
+                    ${content}
                 </div>
                 <div class="comment">
                     <textarea type="text" id="article" placeholder="article" rows="10" cols="100">
