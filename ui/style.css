@@ -23,8 +23,7 @@ img-medium {
 }
 background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
 
-
-h1 {
+#title {
   font-family: Georgia, serif;
   text-align: center;
 }
