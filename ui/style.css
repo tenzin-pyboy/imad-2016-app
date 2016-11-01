@@ -21,7 +21,7 @@ body {
 img-medium {
     height: 100px;
 }
-//	background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
+background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
 .bgimage {
 
 	background-position: center top;
@@ -36,13 +36,3 @@ img-medium {
 h1 {
   font-family: Georgia, serif;
 }
-
-.container {
-                max-width: 1000px;
-                margin: 0 auto;
-                color: rgba(53, 13, 14, 0.55);
-                font-family: sans-serif;
-                padding-left: 20px;
-                padding-right: 20px;
-                background-color: #bfbfbf;
-            }
