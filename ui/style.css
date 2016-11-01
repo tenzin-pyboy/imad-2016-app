@@ -22,17 +22,9 @@ img-medium {
     height: 100px;
 }
 background-image: url('https://s3.amazonaws.com/codecademy-content/projects/make-a-website/lesson-2/bg.jpg');
-.bgimage {
 
-	background-position: center top;
-	background-size: cover;
-	padding: 250px 0;
-	margin: 30px;
-	text-shadow: 0 2px #000000;
-	font-family: 'Trebuchet MS', 'Helvetica';
-    color: #bfbfbf;
-}
 
 h1 {
   font-family: Georgia, serif;
+  text-align: center;
 }
