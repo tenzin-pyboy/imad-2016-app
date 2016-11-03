@@ -26,3 +26,8 @@ img-medium {
   font-family: Georgia, serif;
   text-align: center;
 }
+
+label {
+    width: 100px;
+    float: left;
+}
