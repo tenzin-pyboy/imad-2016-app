@@ -46,14 +46,14 @@ function createTemplate (data) {
                 <div id="article-para">
                     ${content}
                 </div>
-                <div class="comment">
-                    <textarea type="text" id="article" placeholder="article" rows="4" cols="50">
-                    Write your comment here
-                    </textarea>
-                    </br>
-                <input type='submit' value='Submit' id="submit_btn_art"/>  
-                </div>
-                </div>
+                <form method='post'>
+                    Email: <input type='text' name='email' id='email' /><br />
+                    Comment:<br />
+                    <textarea name='comment' id='comment'></textarea><br />
+                    <input type='hidden' name='articleid' id='articleid' value='<? echo $_GET["id"]; ?>' />
+                    <input type='submit' value='Submit' />  
+                </form>
+                <div>
                     <script type="text/javascript" src="/ui/main.js">
                     </script>
                 </div>
