@@ -48,7 +48,7 @@ function createTemplate (data) {
                 </div>
                 <div class="comment">
                     <textarea type="text" id="article" placeholder="article" rows="4" cols="7">
-                        Start writting Article Here.
+                    Write your comment here
                     </textarea>
                 <input type='submit' value='Submit' id="submit_btn_art"/>  
                 </div>
