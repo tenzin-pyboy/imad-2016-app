@@ -50,6 +50,7 @@ function createTemplate (data) {
                     <textarea type="text" id="article" placeholder="article" rows="4" cols="50">
                     Write your comment here
                     </textarea>
+                    </br>
                 <input type='submit' value='Submit' id="submit_btn_art"/>  
                 </div>
                 </div>
