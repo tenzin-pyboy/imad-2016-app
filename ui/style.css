@@ -1,5 +1,4 @@
 body {
-    width: 600px;
     font-family: 'Lato', sans-serif;
     background-image: url('http://www.flashuser.net/wp-content/uploads/2013/01/blurred-background-1.jpg');
     background-position: center top;
@@ -26,6 +25,10 @@ img-medium {
 #title {
   font-family: Georgia, serif;
   text-align: center;
+}
+
+fieldset {
+    width: 600px;
 }
 
 label {
