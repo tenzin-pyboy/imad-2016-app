@@ -3,6 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
+var bodyParser = require('body-parser');
 
 var config = {
     user: 'tenzin-pyboy',
@@ -15,7 +16,7 @@ var config = {
 
 var app = express();
 app.use(morgan('combined'));
-
+app.user(bodyParser.json());
 function createTemplate (data) {
     var title = data.title;
     var date = data.date;
@@ -70,18 +71,7 @@ function createTemplate (data) {
     return htmlTemplate;
 }
 
-var pool = new Pool(config);
-app.get('/test-db', function (req, res) {
-    //make a select request
-    //retrun a response with result
-    pool.query('SELECT * FROM test', function (err, result) {
-        if(err) {
-            res.status(500).send(err.toString());
-        } else {
-            res.send(JSON.stringify(result.rows));
-        }
-    });
-});
+
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
@@ -96,6 +86,34 @@ function hash(input, salt) {
 app.get('/hash/:input', function(req, res) {
     var hashedString = hash(req.params.input, 'this-is-some-random-string');
     res.send(hashedString);
+});
+
+app.post('/create-user', function (req, res) {
+   // username, password
+   var username = req.body.username;
+   var password = req.body.password;
+   var salt = crypto.getRandomBytes(128);
+   var dbString = hash(password, salt);
+   pool.query('INSERT INTO "user" (username, password) VALUE ($1, $2)', [username, dbString], function() {
+       if(err) {
+            res.status(500).send(err.toString());
+        } else {
+            res.send('User is sucessfully created: ' + username );
+        }
+   });
+});
+
+var pool = new Pool(config);
+app.get('/test-db', function (req, res) {
+    //make a select request
+    //retrun a response with result
+    pool.query('SELECT * FROM test', function (err, result) {
+        if(err) {
+            res.status(500).send(err.toString());
+        } else {
+            res.send(JSON.stringify(result.rows));
+        }
+    });
 });
 
 app.get('/articles/:articleName', function (req, res) {
