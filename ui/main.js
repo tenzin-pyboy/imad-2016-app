@@ -1,4 +1,4 @@
-// Counter Code
+
 var button = document.getElementById("counter");
 
 button.onclick = function () {
@@ -24,6 +24,7 @@ button.onclick = function () {
   request.send(null);
 };
 
+//Submit usename and password to login
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
   // Make a request to the server and send the name
@@ -34,64 +35,30 @@ submit.onclick = function () {
   request.onreadystatechange = function () {
     if(request.readyState == XMLHttpRequest.DONE) {
       
-      //Take acction
-      if(request.status === 200){
-        
+        //Take acction
+        if(request.status === 200){
         // Capture a list of names and render it as a list.
-          var names = request.responseText;
-          names = JSON.parse(names);
-          var list = '';
-          for(var i=0; i<names.length; i++) {
-            list += '<li>' + names[i] + '</li>';
-          }
-          var ul = document.getElementById('namelist');
-          ul.innerHTML = list;
-      }
+            console.log('user logged in');
+            alert('Logged in sucessufully');
+        } else if(request.status === 403) {
+            alert('username/password incorrect');
+        } else if(request.status === 500) {
+            alert('Something went wrong on the server');
+        }
     }
   };
   
   //Submit name
-  var nameInput = document.getElementById('name');
-  var name = nameInput.value;
-  
+  var username = document.getElementById('username');
+  var password = document.getElementById('password');
+  console.log(username);
+  console.log(password);
   // Make actual request
-  request.open('GET', 'http://tenzin-pyboy.imad.hasura-app.io/submit-name?name= '+ name, true);
-  request.send(null);
+  request.open('POST', 'http://tenzin-pyboy.imad.hasura-app.io/login', true);
+  request.setRequestHeader('Content-Type', 'application/json');
+  request.send(JSON.stringify({username: username, password: password}));
 };
 
-
-var submitArticle = document.getElementById('submit_btn_art');
-submitArticle.onclick = function () {
-    // Make requestt to server  and send the article
-    // Create a request Object
-    var request = new XMLHttpRequest();
-    
-    // Capture the respond and store it in a variable
-    request.onreadystatechange = function () {
-        
-        //Take action
-        if(request.status === 200 ) {
-            
-            // Capture the list of articles and render it as a list.
-            var articles = request.responseText;
-            articles = JSON.parse(articles);
-            var list = '';
-            for(var i=0; i<articles.length; i++) {
-                list += '<p>' + articles[i] + '</p>';
-            }
-            var ul = document.getElementById('articles-para');
-            ul.innerHTML = list;
-        }
-    };
-    
-    //submit article 
-    var articleInput = document.getElementById('article');
-    var article = articleInput.value;
-    
-    //Make actual reqest 
-    request.open('GET', 'http;//tenzin-pyboy.imad.hasura-app.io/submit-blogs?blog= ' + article, true);
-    request.send(null);
-};
 
 
 
