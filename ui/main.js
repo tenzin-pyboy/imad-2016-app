@@ -34,14 +34,13 @@ submit.onclick = function () {
   // Capture the respond and store it in a variable
   request.onreadystatechange = function () {
     if(request.readyState == XMLHttpRequest.DONE) {
-      
         //Take acction
         if(request.status === 200){
         // Capture a list of names and render it as a list.
             console.log('user logged in');
             alert('Logged in sucessufully');
         } else if(request.status === 403) {
-            alert('username/password incorrect');
+            alert('username/password is incorrect');
         } else if(request.status === 500) {
             alert('Something went wrong on the server');
         }
