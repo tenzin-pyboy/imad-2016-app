@@ -1,29 +1,4 @@
 
-var button = document.getElementById("counter");
-
-button.onclick = function () {
-  // Create a request Object
-  var request = new XMLHttpRequest();
-
-  // Capture the respond and store it in a variable
-  request.onreadystatechange = function () {
-    if(request.readyState == XMLHttpRequest.DONE) {
-      
-      //Take acction
-      if(request.status === 200){
-        var counter = request.responseText;
-
-        // render the variable in correct span
-        var span = document.getElementById("count");
-        span.innerHTML = counter.toString();
-      }
-    }
-  };
-  // Make actual request
-  request.open('GET', 'http://tenzin-pyboy.imad.hasura-app.io/counter', true);
-  request.send(null);
-};
-
 //Submit usename and password to login
 var submit = document.getElementById('submit_btn');
 submit.onclick = function () {
