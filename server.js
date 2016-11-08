@@ -161,6 +161,12 @@ app.get('/check-login', function(req, res) {
         res.send('You are not logged in');
     }
 });
+
+app.post('/logout', function(req, res) {
+    delete res.session.auth;
+    res.send("Your are logged out");
+});
+
 var pool = new Pool(config);
 app.get('/test-db', function (req, res) {
     //make a select request
