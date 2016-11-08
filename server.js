@@ -82,7 +82,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/register', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'register,html'));
+    res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
