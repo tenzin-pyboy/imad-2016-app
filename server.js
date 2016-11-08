@@ -85,6 +85,10 @@ app.get('/register', function(req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
+app.get('/layout', function () {
+    res.sendFile(path.join(__dirname, 'ui', 'layout.html'));
+});
+
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
