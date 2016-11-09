@@ -154,17 +154,13 @@ function createTemplate (data) {
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="/index">Profile</a></li>
+                    <li class="active"><a href="/">Profile</a></li>
                   </ul>
                   <button id="logoutBtn" class="btn btn-sm btn-default pull-right" type="submit">Log Out</button>
                 </div><!-- navbar-collapse -->
               </div>
             </nav>
             <div class="container">
-                <div>
-                  <a href="/">Home</a>
-                </div>
-                <hr/>
                 <h3>
                   ${heading}
                 </h3>
