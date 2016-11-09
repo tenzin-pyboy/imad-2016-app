@@ -86,7 +86,7 @@ app.get('/register', function(req, res) {
 });
 
 app.get('/login', function(req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'register.html'));
+    res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
 app.get('/layout', function (req, res) {
