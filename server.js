@@ -23,7 +23,7 @@ app.use(session({
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
 
-function createTemplate (data) {
+function createinTemplate (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
@@ -114,7 +114,7 @@ function createTemplate (data) {
     return htmlTemplate;
 }
 
-function createInTemplate (data) {
+function createTemplate (data) {
     var title = data.title;
     var date = data.date;
     var heading = data.heading;
