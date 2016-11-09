@@ -176,7 +176,6 @@ function createTemplate (data) {
                     ${content}
                 </div>
                     <legend> Add a Comment</legend>
-                    <label for="comment">Comment</label>
                     <textarea rows="6" cols="50" name="comment" id="comment"></textarea>
                     <br /><br />
                     <input class="btn btn-primary pull-left" type="submit" value="Submit"/>
