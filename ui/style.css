@@ -56,3 +56,7 @@ footer {
 	padding-top: 10px;
 	overflow: auto;
 }
+
+#logoutBtn {
+    padding: 3px;
+}
