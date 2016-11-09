@@ -149,7 +149,7 @@ app.get('/hash/:input', function(req, res) {
     res.send(hashedString);
 });
 
-app.post('/create-user', function (req, res) {
+app.post('/register', function (req, res) {
    // username, password
    var username = req.body.username;
    var password = req.body.password;
@@ -160,6 +160,9 @@ app.post('/create-user', function (req, res) {
             res.status(500).send(err.toString());
         } else {
             res.send('User is sucessfully created: ' + username );
+            alert('User is sucessfully created: ' + username);
+            res.redirect('/layout');
+            
         }
    });
 });
