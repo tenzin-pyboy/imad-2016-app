@@ -47,7 +47,7 @@ function createTemplate (data) {
             <!-- Optional theme -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
                     <meta name="viewport" content="width=device-width, initial-scale=1" />
-            <link href="./ui/style.css" rel="stylesheet" />
+            <link href="/ui/style.css" rel="stylesheet" />
         </head>
         <body>
             <nav class="navbar navbar-inverse navbar-fixed-top">
