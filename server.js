@@ -67,7 +67,7 @@ function createTemplate (data) {
                     <li><a href="#about">Login</a></li>
                     <li><a href="#contact">Register</a></li>
                   </ul>
-                 <form class="navbar-form navbar-right">
+                 <form class="navbar-form navbar-centre">
                     <input type="text" class="form-control" placeholder="Search...">
                   </form>
                 </div><!--/.navbar-collapse -->
