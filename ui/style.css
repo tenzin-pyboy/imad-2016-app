@@ -58,5 +58,7 @@ footer {
 }
 
 #logoutBtn {
-    padding: 15px;
+    padding: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 }
