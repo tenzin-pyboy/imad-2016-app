@@ -66,9 +66,8 @@ function createTemplate (data) {
                     <li class="active"><a href="#">Profile</a></li>
                     <li><a href="#about">Login</a></li>
                     <li><a href="#contact">Register</a></li>
-                    <button id="logoutBtn" class="btn btn-lg btn-default pull-right" type="submit">Log Out</button>
                   </ul>
-                
+                  <button id="logoutBtn" class="btn btn-lg btn-default pull-right" type="submit">Log Out</button>
                 </div><!--/.navbar-collapse -->
               </div>
             </nav>
