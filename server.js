@@ -154,7 +154,7 @@ function createTemplate (data) {
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                   <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Profile</a></li>
+                    <li class="active"><a href="/index">Profile</a></li>
                   </ul>
                   <button id="logoutBtn" class="btn btn-sm btn-default pull-right" type="submit">Log Out</button>
                 </div><!-- navbar-collapse -->
@@ -191,7 +191,7 @@ function createTemplate (data) {
     return htmlTemplate;
 }
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'layout.html'));
 });
 
 app.get('/register', function(req, res) {
@@ -202,8 +202,8 @@ app.get('/login', function(req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
-app.get('/layout', function (req, res) {
-    res.sendFile(path.join(__dirname, 'ui', 'layout.html'));
+app.get('/index', function (req, res) {
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
