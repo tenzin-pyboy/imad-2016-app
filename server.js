@@ -123,7 +123,7 @@ app.get('/register', function(req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'register.html'));
 });
 
-app.get('/login', function(req, res) {
+app.get('/userlogin', function(req, res) {
     res.sendFile(path.join(__dirname, 'ui', 'login.html'));
 });
 
