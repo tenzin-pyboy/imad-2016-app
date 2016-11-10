@@ -86,18 +86,11 @@ function createTemplate (data) {
                 <div id="article-para">
                     ${content}
                 </div>
-                <form action="" method="POST">
-                <fieldset>
                     <legend> Add a Comment</legend>
-                    <label for="handle">E-mail</label>
-                    <input type="text" name="handle" id="handle" vlue="" maxlength="64" />
-                    <br /><br />
                     <label for="comment">Comment</label>
                     <textarea rows="6" cols="50" name="comment" id="comment"></textarea>
                     <br /><br />
                     <input type="submit" value="Submit" />
-                </fieldset>
-                </form>
                 <div>
                     <script type="text/javascript" src="/ui/main.js">
                     </script>
