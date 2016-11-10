@@ -86,11 +86,13 @@ function createTemplate (data) {
                 <div id="article-para">
                     ${content}
                 </div>
+                <div id="comment">
+                </div>
                     <legend> Add a Comment</legend>
                     <label for="comment">Comment</label>
                     <textarea rows="6" cols="50" name="comment" id="comment"></textarea>
                     <br /><br />
-                    <input class="btn pull-left" type="submit" value="Submit" />
+                    <input id class="btn pull-left" type="submit" value="Submit" />
                 <div>
                     <script type="text/javascript" src="/ui/main.js">
                     </script>
