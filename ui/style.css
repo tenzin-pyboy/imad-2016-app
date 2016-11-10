@@ -66,6 +66,6 @@ footer {
     margin-top: 7px;
 }
 
-fieldset {
-    border:1px solid #999;
+.container {
+    padding: 30px;
 }
