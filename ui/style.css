@@ -45,8 +45,10 @@ body {
  }
 
 .jumbotron {
-	background-image: url('http://tunklkata.hu/images/bemutatkozas/bemutatkozas-1.jpg') ;
-	color: white;
+	background-image: url('http://tunklkata.hu/images/bemutatkozas/bemutatkozas-1.jpg');
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 footer {
