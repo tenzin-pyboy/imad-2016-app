@@ -64,8 +64,7 @@ submit.onclick = function () {
         request.send(JSON.stringify({username: username, password: password}));  
         register.value = 'Registering...';
     
-    };
-}
+};
 
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
