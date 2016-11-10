@@ -210,6 +210,7 @@ function loadComments () {
     request.send(null);
 }
 
+load
 
 
 
