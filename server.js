@@ -86,7 +86,7 @@ function createTemplate (data) {
                 <div id="article-para">
                     ${content}
                 </div>
-                <div id="comment">
+                <div class="comment">
                 </div>
                     <legend> Add a Comment</legend>
                     <label for="comment">Comment</label>
