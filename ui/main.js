@@ -1,6 +1,6 @@
 
 //Submit usename and password to login
-var submit = document.getElements('container form-signin input-group login_btn');
+/*var submit = document.getElementById('login_btn');
 submit.onclick = function () {
   // Make a request to the server and send the name
     // Create a request Object
@@ -21,7 +21,7 @@ submit.onclick = function () {
         }
     }
   };
-  
+  */
   //Submit name
   var username = document.getElementById('username').value;
   var password = document.getElementById('password').value;
