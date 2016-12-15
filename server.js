@@ -196,6 +196,11 @@ app.post('/login', function(req, res) {
     });
 });
 
+app.get('*', function(req, res, next) {
+  res.locals.user = req.session.auth || null;
+  next();
+});
+
 app.get('/check-login', function(req, res) {
     if(req.session && req.session.auth && req.session.auth.userId) {
         res.send('You are logged in: ' + req.session.auth.userId.toString());
